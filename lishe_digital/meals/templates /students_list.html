@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Students List{% endblock %}
+
+{% block content %}
+<h2>Students List</h2>
+<ul>
+    {% if students %}
+        {% for student in students %}
+            <li>{{ student.name }} - Balance: KSh {{ student.balance }}</li>
+        {% endfor %}
+    {% else %}
+        <li>No students available.</li>
+    {% endif %}
+</ul>
+{% endblock %}
