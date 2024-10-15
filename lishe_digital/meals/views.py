@@ -22,8 +22,8 @@ def purchase_meal(request, qr_code):
                 return render(request, 'insufficient_balance.html', {'student': student})
     else:
         form = MealPurchaseForm()
-    return render(request, 'purchase_meal.html', {'form': form, 'student': student})
+    return render(request, 'meals/purchase_meal.html', {'form': form, 'student': student})
 
 def students_list(request):
     students = Student.objects.all()  # Replace with the correct queryset
-    return render(request, 'students_list.html', {'students': students})
+    return render(request, 'meals/students_list.html', {'students': students})

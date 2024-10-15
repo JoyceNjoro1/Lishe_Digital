@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Purchase Successful{% endblock %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Success!</h4>
+    <p>{{ student.name }} has successfully purchased {{ meal.name }} for KSh {{ meal.price }}.</p>
+    <hr>
+    <p>Current balance: KSh {{ student.balance }}.</p>
+    <a href="/" class="btn btn-primary">Back to Home</a>
+</div>
+{% endblock %}
